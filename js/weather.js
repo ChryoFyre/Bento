@@ -9,11 +9,11 @@ weather.temperature = {
 };
 
 // Change to 'F' for Fahrenheit
-var tempUnit = 'C';
+var tempUnit = 'F';
 
 const KELVIN = 273.15;
 // Use your own key for the Weather, Get it here: https://openweathermap.org/
-const key = 'aa5b0a76dfbf87441928fb3cc32d3d72';
+const key = '1cd6a2ae6d96f6cd8f781f96759ff58f';
 
 // Set Position function
 setPosition();
@@ -21,8 +21,8 @@ setPosition();
 function setPosition(position) {
   // Here you can change your position
   // You can use https://www.latlong.net/ to get it! (I use San Francisco as an example)
-  let latitude = 37.774929;
-  let longitude = -122.419418;
+  let latitude = 44.012123;
+  let longitude = -92.480202;
 
   getWeather(latitude, longitude);
 }
@@ -52,7 +52,7 @@ function getWeather(latitude, longitude) {
 
 // Display Weather info
 function displayWeather() {
-  iconElement.innerHTML = `<img src="icons/OneDark/${weather.iconId}.png"/>`;
+  iconElement.innerHTML = `<img src="icons/Nord/${weather.iconId}.png"/>`;
   tempElement.innerHTML = `${weather.temperature.value}°<span class="darkfg">${tempUnit}</span>`;
   descElement.innerHTML = weather.description;
 }
